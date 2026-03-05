@@ -5,24 +5,24 @@ const programs = [
   {
     title: "Tahfidzul Qur'an",
     desc: "Program unggulan menghafal Al-Qur'an dengan metode mutqin dan bimbingan ustadz berpengalaman.",
-    icon: "📖",
+    icon: "/smawa.png",
   },
   {
     title: "Kajian Kitab Kuning",
     desc: "Pendalaman literatur Islam klasik untuk membentuk pemahaman agama yang mendalam dan moderat.",
-    icon: "🕌",
+    icon: "/smawa.png",
   },
   {
     title: "Digital Science",
     desc: "Penguasaan teknologi informasi dan sains modern sebagai bekal menghadapi era industri 4.0.",
-    icon: "💻",
+    icon: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=600",
   },
 ];
 
 const Programs = () => {
   return (
     <section id="akademik" className="py-24 bg-primary-50 dark:bg-primary-950 transition-colors duration-500">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto">
         
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -32,7 +32,7 @@ const Programs = () => {
             </h2>
           </Reveal>
           <Reveal direction="up" delay={0.4}>
-            <p className="text-slate-600 dark:text-primary-100/70 max-w-2xl mx-auto font-sans">
+            <p className="text-slate-600 dark:text-primary-100/70 max-w-2xl text-start font-sans">
               Kami menyusun kurikulum yang menyeimbangkan kecerdasan intelektual dan spiritual untuk mencetak lulusan paripurna.
             </p>
           </Reveal>
@@ -49,15 +49,15 @@ const Programs = () => {
             >
               <motion.div 
                 whileHover={{ y: -10 }} // Efek angkat saat di-hover
-                className="p-8 rounded-[2rem] bg-white dark:bg-primary-900 border border-primary-100 dark:border-primary-800 shadow-xl shadow-primary-900/5 h-full transition-colors duration-500"
+                className="rounded-[2rem] bg-white dark:bg-primary-900 border border-primary-100 dark:border-primary-800 shadow-xl shadow-primary-900/5 h-full transition-colors duration-500"
               >
-                <div className="w-14 h-14 bg-primary-50 dark:bg-primary-800 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-inner">
-                  {item.icon}
+                <div className="w-full h-40 mb-6 bg-primary-50 dark:bg-primary-800 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-inner">
+                  <img src={ item.icon } className="w-full h-full object-cover object-center" alt="" />
                 </div>
-                <h3 className="text-2xl font-serif font-bold text-primary-900 dark:text-white mb-4">
+                <h3 className="pl-6 text-2xl font-serif font-bold text-primary-900 dark:text-white mb-4">
                   {item.title}
                 </h3>
-                <p className="text-slate-600 dark:text-primary-100/70 leading-relaxed font-sans">
+                <p className="pl-6 mb-6 text-slate-600 dark:text-primary-100/70 leading-relaxed font-sans">
                   {item.desc}
                 </p>
               </motion.div>

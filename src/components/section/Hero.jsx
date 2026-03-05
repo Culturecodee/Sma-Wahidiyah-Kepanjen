@@ -19,15 +19,15 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center bg-[#f0faf4] dark:bg-primary-950 overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center bg-[#f0faf4] dark:bg-primary-950 overflow-hidden pt-28">
       {/* Grid Dots Decor */}
       <div className="absolute inset-0 opacity-20 dark:opacity-10" 
            style={{backgroundSize: '30px 30px' }} />
 
-      <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
         
         {/* KOLOM KIRI: Konten Teks (Tetap Sama) */}
-        <div className="max-w-xl">
+        <div className="max-w-sm">
           <Reveal direction="down" delay={0.2}>
             <div className="inline-block border border-primary-600/30 px-4 py-1.5 rounded-full mb-8 bg-white/50 dark:bg-primary-900/30">
               <span className="text-xs font-bold tracking-widest uppercase text-primary-700 dark:text-accent">
@@ -50,7 +50,7 @@ const Hero = () => {
             </p>
           </Reveal>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap items-center justify-items-center gap-4">
              <Reveal direction="up" delay={0.8}>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwauRnDhy2edFGQXkj7BPPMB8cylid6_YYR6kLpGABEsmgXQ/viewform?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnEdp8bV64LHIQnmyKscepxEX7iamwRC-MGzQQc91sab-umWvWk9HiAxBRT9Q_aem_sdYYdPQhyqv6_KDRoxDxTA" className='cursor-pointer'>
                 <motion.button 
@@ -85,7 +85,7 @@ const Hero = () => {
                 autoplay={{ delay: 4000, disableOnInteraction: false }}
                 pagination={{ clickable: true }}
                 modules={[Autoplay, EffectFade, Pagination]}
-                className="w-full h-[450px] md:h-[550px] shadow-sm rounded-[2.5rem] border-8 border-white dark:border-primary-900 z-10"
+                className="w-full h-[450px] md:h-[550px] shadow-sm rounded-3xl border-8 border-white dark:border-primary-900 z-10"
               >
                 {schoolImages.map((img, index) => (
                   <SwiperSlide key={index}>

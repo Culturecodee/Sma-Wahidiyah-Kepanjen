@@ -48,13 +48,13 @@ const Navbar = () => {
         ? "bg-white/90 dark:bg-primary-900/95 shadow-lg py-3" 
         : "bg-transparent py-6"
     }`}>
-      <div className="container mx-auto px-6 flex justify-between items-center">
+      <div className="container mx-auto px-6   flex justify-between items-center">
         
         {/* Logo */}
         <Reveal direction="left" delay={0.1}>
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary-700 rounded-lg flex items-center justify-center shadow-lg">
-              <span className="text-white font-serif font-bold text-2xl">W</span>
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center shadow-lg">
+              <img src="smawa.png" alt="logo smawa" />
             </div>
             <div className="hidden sm:block text-primary-900 dark:text-white">
               <h1 className="font-serif font-bold text-lg leading-none">SMA WAHIDIYAH</h1>

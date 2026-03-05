@@ -11,7 +11,7 @@ const statData = [
 const Stats = () => {
   return (
     <section className="py-20 bg-white dark:bg-primary-900 transition-colors duration-500">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {statData.map((stat, index) => (
             <Reveal 

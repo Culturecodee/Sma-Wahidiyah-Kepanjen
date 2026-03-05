@@ -35,6 +35,10 @@
     /* Gunakan Plus Jakarta Sans sebagai font utama aplikasi */
     @apply font-sans antialiased bg-white text-slate-900 dark:bg-primary-900 dark:text-white transition-colors duration-300;
   }
+
+  section, footer {
+    @apply px-5 md:px-24 mx-auto
+  }
   
   /* Judul otomatis pakai Crimson Pro */
   h1, h2, h3, h4, h5, h6 {
