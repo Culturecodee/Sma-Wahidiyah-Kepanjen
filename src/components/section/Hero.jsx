@@ -1,0 +1,115 @@
+import { UserRound } from 'lucide-react'
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import Reveal from "./Reveal";
+
+// Import Swiper React components & styles
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/pagination";
+
+const Hero = () => {
+  // Data gambar slider (Ganti URL dengan foto asli sekolah/event)
+  const schoolImages = [
+    { src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800", title: "Gedung Utama Kepanjen" },
+    { src: "https://images.unsplash.com/photo-1523050853064-59f602c3d3a6?q=80&w=800", title: "Event Sholawat Wahidiyah" },
+    { src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800", title: "Laboratorium Sains Modern" },
+  ];
+
+  return (
+    <section className="relative min-h-screen flex items-center bg-[#f0faf4] dark:bg-primary-950 overflow-hidden pt-20">
+      {/* Grid Dots Decor */}
+      <div className="absolute inset-0 opacity-20 dark:opacity-10" 
+           style={{backgroundSize: '30px 30px' }} />
+
+      <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+        
+        {/* KOLOM KIRI: Konten Teks (Tetap Sama) */}
+        <div className="max-w-xl">
+          <Reveal direction="down" delay={0.2}>
+            <div className="inline-block border border-primary-600/30 px-4 py-1.5 rounded-full mb-8 bg-white/50 dark:bg-primary-900/30">
+              <span className="text-xs font-bold tracking-widest uppercase text-primary-700 dark:text-accent">
+                Pendaftaran Siswa Baru 2026/2027
+              </span>
+            </div>
+          </Reveal>
+
+          <Reveal direction="left" delay={0.4}>
+            <h1 className="text-5xl md:text-7xl font-serif font-bold text-primary-900 dark:text-white leading-[1.1] mb-8 text-left">
+              Mewujudkan <br /> 
+              Generasi <br />
+              <span className="text-primary-700 italic">Cerdas Berakhlak.</span>
+            </h1>
+          </Reveal>
+
+          <Reveal direction="left" delay={0.6}>
+            <p className="text-lg text-slate-600 dark:text-primary-100/70 font-sans leading-relaxed mb-10 max-w-md text-left">
+              SMA Wahidiyah Kepanjen memadukan keunggulan akademik dengan kedalaman spiritual untuk masa depan santri yang cemerlang.
+            </p>
+          </Reveal>
+
+          <div className="flex flex-wrap gap-4">
+             <Reveal direction="up" delay={0.8}>
+                <motion.button 
+                  whileHover={{ y: -5 }}
+                  className="px-8 py-4 mt-2 bg-[#047857] text-white rounded-2xl font-bold text-lg transition-all duration-300"
+                >
+                  Mulai Pendaftaran
+                </motion.button>
+             </Reveal>
+             <Reveal direction="up" delay={0.9} overflow="visible">
+                <motion.button 
+                  whileHover={{ y: -5 }}
+                  className="px-8 py-4 mt-2 border-2 border-[#047857] text-[#047857] dark:text-primary-100 dark:border-primary-100 rounded-2xl font-bold text-lg transition-all duration-300"
+                ><Link to="/profil" className='flex gap-2'>
+
+                 <UserRound /> Lihat Profil
+                </Link>
+                </motion.button>
+             </Reveal>
+          </div>
+        </div>
+
+        {/* KOLOM KANAN: Slider Foto Sekolah */}
+        <div className="relative w-full max-w-[500px] mx-auto md:ml-auto">
+          <Reveal direction="right" delay={0.5} overflow="visible">
+            <div className="relative p-4">
+              {/* Slider Utama */}
+              <Swiper
+                effect={"fade"}
+                speed={1000}
+                autoplay={{ delay: 4000, disableOnInteraction: false }}
+                pagination={{ clickable: true }}
+                modules={[Autoplay, EffectFade, Pagination]}
+                className="w-full h-[450px] md:h-[550px] rounded-[2.5rem] shadow-2xl border-8 border-white dark:border-primary-900 z-10"
+              >
+                {schoolImages.map((img, index) => (
+                  <SwiperSlide key={index}>
+                    <img 
+                      src={img.src} 
+                      alt={img.title} 
+                      className="w-full h-full object-cover"
+                    />
+                    {/* Caption Kecil di dalam Slider */}
+                    <div className="absolute bottom-10 left-8 backdrop-blur-md px-4 py-2 rounded-xl">
+                       <p className="text-white text-xs font-bold uppercase tracking-widest">{img.title}</p>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+
+              {/* Elemen Dekoratif di belakang slider (Sesuai gaya gambarmu sebelumnya) */}
+              <div className="absolute -bottom-6 -left-6 w-40 h-40 rounded-[2rem] -z-10 blur-2xl" />
+              <div className="absolute -top-6 -right-6 w-32 h-32 rounded-full -z-10 blur-xl" />
+            </div>
+          </Reveal>
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

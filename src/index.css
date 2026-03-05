@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* 1. IMPORT GOOGLE FONTS */
+/* Crimson Pro untuk kesan Religius/Serif, Plus Jakarta Sans untuk Modern/Sans */
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* 2. DAFTARKAN FONT KE VARIABLE TAILWIND V4 */
+  --font-serif: "Crimson Pro", serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui;
+
+  --color-card-light: #ffffff;
+  --color-card-dark: #064e3b; /* Hijau lebih gelap untuk card di dark mode */
+  /* 3. PALETTE WARNA HIJAU RELIGIUS (WAHIDIYAH) */
+  --color-primary-50: #f0fdf4;
+  --color-primary-100: #dcfce7;
+  --color-primary-500: #10b981;
+  --color-primary-700: #047857;
+  --color-primary-800: #065f46;
+  --color-primary-900: #064e3b;
+  --color-primary-950: #022c22;
+  
+  /* Aksen Emas untuk Detail Premium */
+  --color-accent: #d4af37;
+}
+
+/* 4. SETTING DEFAULT AGAR OTOMATIS BERUBAH */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    /* Gunakan Plus Jakarta Sans sebagai font utama aplikasi */
+    @apply font-sans antialiased bg-white text-slate-900 dark:bg-primary-900 dark:text-white transition-colors duration-300;
+  }
+  
+  /* Judul otomatis pakai Crimson Pro */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}

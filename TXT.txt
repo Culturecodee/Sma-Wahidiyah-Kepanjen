@@ -1,0 +1,10 @@
+Web sekolah
+
+A. Beranda
+  1. Hero section
+  2. Progam unggulan
+  3. Stats
+  4. Visi Misi sekolah
+  5. Fasilitas
+  6. Testimoni
+  7. Footer
