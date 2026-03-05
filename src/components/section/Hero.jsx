@@ -1,4 +1,4 @@
-import { UserRound } from 'lucide-react'
+import { UserRound, LogIn } from 'lucide-react'
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Reveal from "./Reveal";
@@ -52,12 +52,14 @@ const Hero = () => {
 
           <div className="flex flex-wrap gap-4">
              <Reveal direction="up" delay={0.8}>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwauRnDhy2edFGQXkj7BPPMB8cylid6_YYR6kLpGABEsmgXQ/viewform?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnEdp8bV64LHIQnmyKscepxEX7iamwRC-MGzQQc91sab-umWvWk9HiAxBRT9Q_aem_sdYYdPQhyqv6_KDRoxDxTA" className='cursor-pointer'>
                 <motion.button 
                   whileHover={{ y: -5 }}
-                  className="px-8 py-4 mt-2 bg-[#047857] text-white rounded-2xl font-bold text-lg transition-all duration-300"
-                >
-                  Mulai Pendaftaran
+                  className="px-8 py-4 mt-2 flex gap-2 bg-[#047857] text-white rounded-2xl font-bold text-lg transition-all duration-300 cursor-pointer"
+                  >
+                  <LogIn />Mulai Pendaftaran
                 </motion.button>
+                  </a>
              </Reveal>
              <Reveal direction="up" delay={0.9} overflow="visible">
                 <motion.button 
@@ -83,7 +85,7 @@ const Hero = () => {
                 autoplay={{ delay: 4000, disableOnInteraction: false }}
                 pagination={{ clickable: true }}
                 modules={[Autoplay, EffectFade, Pagination]}
-                className="w-full h-[450px] md:h-[550px] rounded-[2.5rem] shadow-2xl border-8 border-white dark:border-primary-900 z-10"
+                className="w-full h-[450px] md:h-[550px] shadow-sm rounded-[2.5rem] border-8 border-white dark:border-primary-900 z-10"
               >
                 {schoolImages.map((img, index) => (
                   <SwiperSlide key={index}>

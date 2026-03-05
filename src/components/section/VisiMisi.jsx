@@ -22,7 +22,7 @@ const VisiMisi = () => {
               <h2 className="text-5xl font-serif font-bold text-primary-900 dark:text-white mt-4 mb-8">Visi Sekolah</h2>
             </Reveal>
             <Reveal direction="up" delay={0.6}>
-              <div className="p-10 bg-white dark:bg-primary-900 rounded-[2.5rem] shadow-xl border-l-[12px] border-primary-700">
+              <div className="p-10 bg-white dark:bg-primary-900 rounded-[2.5rem] border-l-[12px] shadow-sm border-primary-700">
                 <p className="text-2xl font-serif italic text-slate-700 dark:text-primary-100 leading-relaxed">
                   "Menciptakan Wali yang intelek, dan intelektual yang wali."
                 </p>

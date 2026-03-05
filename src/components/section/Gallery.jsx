@@ -72,9 +72,9 @@ const Gallery = () => {
                     hover: { opacity: 1, y: 0 }
                   }}
                   initial={{ opacity: 0, y: 0 }}
-                  className="absolute inset-0 bg-gradient-to-t from-primary-950/90 via-transparent to-transparent flex items-end p-20 md:p-8 md:opacity-0 md:translate-y-5"
+                  className="absolute w-full inset-0 bg-gradient-to-t from-primary-950/90 via-transparent to-transparent flex items-end p-20 md:p-8 md:translate-y-3"
                 >
-                  <p className="text-white font-serif text-lg md:text-xl font-bold">{img.title}</p>
+                  <p className="text-white font-serif text-xl mb-6 md:mb-0 lg:mb-12 text-start md:text-xl font-bold">{img.title}</p>
                 </motion.div>
               </motion.div>
             </Reveal>
