@@ -1,10 +1,9 @@
-import Hero from "../section/Hero";
-import Progams from '../section/Progam'
-import Stats from '../section/Stats'
-import VisiMisi from '../section/VisiMisi'
-import Gallery from '../section/Gallery'
-import Testimoni from "../section/Testimoni";
-import Footer from "../section/Footer";
+import Hero from "../section/Home/Hero";
+import Progams from '../section/Home/Progam'
+import Stats from '../section/Home/Stats'
+import VisiMisi from '../section/Home/VisiMisi'
+import Gallery from '../section/Home/Gallery'
+import Testimoni from "../section/Home/Testimoni";
 
 export default function Home() {
   return (
@@ -15,7 +14,7 @@ export default function Home() {
       <VisiMisi/>
       <Gallery/>
       <Testimoni/>
-      <Footer/>
+      
     </>
   )
 }

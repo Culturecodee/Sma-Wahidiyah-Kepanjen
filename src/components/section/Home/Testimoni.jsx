@@ -1,4 +1,4 @@
-import Reveal from "./Reveal";
+import Reveal from "../Reveal";
 import { motion } from "framer-motion";
 
 const testimonials = [
@@ -35,14 +35,14 @@ const Testimoni = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((t, index) => (
             <Reveal key={index} direction="up" delay={0.2 * index}>
-              <div className="p-8 bg-white dark:bg-primary-900 rounded-2xl mb-2 shadow-md border border-primary-100 dark:border-primary-900 text-left relative overflow-visible">
+              <div className="p-8  bg-white dark:bg-primary-900 rounded-2xl mb-2 shadow-md border border-primary-100 dark:border-primary-900 text-left relative overflow-visible">
                 <div className="absolute inset-0 w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white text-2xl shadow-lg">
                   "
                 </div>
-                <p className="text-slate-600 dark:text-primary-100/70 italic mb-8 font-sans leading-relaxed pt-4">
+                <p className="text-slate-600 md:h-20 dark:text-primary-100/70 italic mb-8 font-sans leading-relaxed pt-4">
                   {t.text}
                 </p>
-                <div className="flex items-center gap-4">
+                <div className="flex items-center mt-20 gap-4">
                   <img src={t.avatar} alt={t.name} className="w-12 h-12 rounded-full border-2 border-primary-700" />
                   <div>
                     <h4 className="font-bold text-primary-900 dark:text-white">{t.name}</h4>

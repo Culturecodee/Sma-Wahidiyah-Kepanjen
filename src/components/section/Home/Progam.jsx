@@ -1,4 +1,4 @@
-import Reveal from "./Reveal";
+import Reveal from "../Reveal";
 import { motion } from "framer-motion";
 
 const programs = [
@@ -57,7 +57,8 @@ const Programs = () => {
                 <h3 className="pl-6 text-2xl font-serif font-bold text-primary-900 dark:text-white mb-4">
                   {item.title}
                 </h3>
-                <p className="pl-6 mb-6 text-slate-600 dark:text-primary-100/70 leading-relaxed font-sans">
+                <p className="pl-6 mb-6 text-slate-600 dark:text-primary-100/70 leading-relaxed line-clamp-2
+                 font-sans">
                   {item.desc}
                 </p>
               </motion.div>

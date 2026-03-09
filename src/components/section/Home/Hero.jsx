@@ -1,7 +1,7 @@
 import { UserRound, LogIn } from 'lucide-react'
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import Reveal from "./Reveal";
+import Reveal from "../Reveal";
 
 // Import Swiper React components & styles
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,7 +13,7 @@ import "swiper/css/pagination";
 const Hero = () => {
   // Data gambar slider (Ganti URL dengan foto asli sekolah/event)
   const schoolImages = [
-    { src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800", title: "Gedung Utama Kepanjen" },
+    { src: "/gedung.jpg", title: "Gedung Utama Kepanjen" },
     { src: "https://images.unsplash.com/photo-1523050853064-59f602c3d3a6?q=80&w=800", title: "Event Sholawat Wahidiyah" },
     { src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800", title: "Laboratorium Sains Modern" },
   ];
@@ -24,10 +24,10 @@ const Hero = () => {
       <div className="absolute inset-0 opacity-20 dark:opacity-10" 
            style={{backgroundSize: '30px 30px' }} />
 
-      <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
         
         {/* KOLOM KIRI: Konten Teks (Tetap Sama) */}
-        <div className="max-w-sm">
+        <div className="max-w-sm md:max-w-lg">
           <Reveal direction="down" delay={0.2}>
             <div className="inline-block border border-primary-600/30 px-4 py-1.5 rounded-full mb-8 bg-white/50 dark:bg-primary-900/30">
               <span className="text-xs font-bold tracking-widest uppercase text-primary-700 dark:text-accent">
@@ -50,7 +50,7 @@ const Hero = () => {
             </p>
           </Reveal>
 
-          <div className="flex flex-wrap items-center justify-items-center gap-4">
+          <div className="flex flex-wrap md:flex-nowrap items-center justify-items-center gap-4">
              <Reveal direction="up" delay={0.8}>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwauRnDhy2edFGQXkj7BPPMB8cylid6_YYR6kLpGABEsmgXQ/viewform?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnEdp8bV64LHIQnmyKscepxEX7iamwRC-MGzQQc91sab-umWvWk9HiAxBRT9Q_aem_sdYYdPQhyqv6_KDRoxDxTA" className='cursor-pointer'>
                 <motion.button 
@@ -75,28 +75,28 @@ const Hero = () => {
         </div>
 
         {/* KOLOM KANAN: Slider Foto Sekolah */}
-        <div className="relative w-full max-w-[500px] mx-auto md:ml-auto">
+        <div className="relative w-full max-w-full mx-auto md:ml-auto">
           <Reveal direction="right" delay={0.5} overflow="visible">
-            <div className="relative p-4">
+            <div className="relative">
               {/* Slider Utama */}
               <Swiper
                 effect={"fade"}
                 speed={1000}
-                autoplay={{ delay: 4000, disableOnInteraction: false }}
+                autoplay={{ delay: 100, disableOnInteraction: true }}
                 pagination={{ clickable: true }}
                 modules={[Autoplay, EffectFade, Pagination]}
-                className="w-full h-[450px] md:h-[550px] shadow-sm rounded-3xl border-8 border-white dark:border-primary-900 z-10"
+                className="absolute max-w-lg md:max-w-xl lg:max-w-3xl h-[350px] md:h-[400px] lg:h-[550px] shadow-sm rounded-3xl border-8 border-white dark:border-primary-900 z-10"
               >
                 {schoolImages.map((img, index) => (
                   <SwiperSlide key={index}>
                     <img 
                       src={img.src} 
                       alt={img.title} 
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
                     />
                     {/* Caption Kecil di dalam Slider */}
-                    <div className="absolute bottom-10 left-8 backdrop-blur-md px-4 py-2 rounded-xl">
-                       <p className="text-white text-xs font-bold uppercase tracking-widest">{img.title}</p>
+                    <div className="absolute bottom-10 left-8 bg-white px-4 py-2 rounded-xl">
+                       <p className="text-black text-xs font-bold uppercase tracking-widest">{img.title}</p>
                     </div>
                   </SwiperSlide>
                 ))}

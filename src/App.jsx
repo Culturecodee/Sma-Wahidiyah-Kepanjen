@@ -3,7 +3,10 @@ import { AnimatePresence } from "framer-motion";
 
 // Import Komponen & Pages
 import Navbar from "./components/section/Navbar";
+import Footer from './components/section/Footer'
 import Home from "./components/pages/Home";
+import Profile from "./components/pages/Profile";
+import Akademiks from "./components/pages/Akademiks";
 
 
 function AnimatedRoutes() {
@@ -14,6 +17,8 @@ function AnimatedRoutes() {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
+        <Route path="/profil" element={<Profile />} />
+        <Route path="/akademik" element={<Akademiks />} />
       </Routes>
     </AnimatePresence>
   );
@@ -31,6 +36,7 @@ function App() {
         </main>
 
         {/* Footer bisa diletakkan di sini nanti */}
+        <Footer/>
       </div>
     </Router>
   );

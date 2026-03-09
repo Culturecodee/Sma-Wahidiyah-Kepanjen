@@ -1,4 +1,4 @@
-import Reveal from "./Reveal";
+import Reveal from "../Reveal";
 import { motion } from "framer-motion";
 
 const galleryImages = [
@@ -37,7 +37,7 @@ const Gallery = () => {
             - md:grid-cols-4: Empat kolom di Desktop
             - auto-rows-[250px]: Memberi tinggi dasar yang lebih pas untuk mobile
         */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[250px] md:auto-rows-[200px]">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-2 auto-rows-[220px] md:auto-rows-[200px]">
           {galleryImages.map((img, index) => (
             <Reveal 
               key={img.id} 
@@ -49,7 +49,7 @@ const Gallery = () => {
               className={img.size}
             >
               <motion.div 
-                className="relative w-full h-full group overflow-hidden rounded-3xl cursor-pointer"
+                className="relative w-full h-full group overflow-hidden rounded-3xl  cursor-pointer"
                 whileHover="hover"
                 // Tap effect untuk mobile agar user tahu itu bisa diklik
                 whileTap={{ scale: 0.98 }}
@@ -68,13 +68,9 @@ const Gallery = () => {
                 
                 {/* Overlay Text - Di mobile kita buat opacity lebih terlihat (0.4) agar teks terbaca tanpa hover */}
                 <motion.div 
-                  variants={{
-                    hover: { opacity: 1, y: 0 }
-                  }}
-                  initial={{ opacity: 0, y: 0 }}
-                  className="absolute w-full inset-0 bg-gradient-to-t from-primary-950/90 via-transparent to-transparent flex items-end p-20 md:p-8 md:translate-y-3"
+                  className="absolute w-full inset-0 bg-gradient-to-t from-primary-950/90 via-transparent to-transparent flex items-end p-6 md:p-8 md:translate-y-3"
                 >
-                  <p className="text-white font-serif text-xl mb-6 md:mb-0 lg:mb-12 text-start md:text-xl font-bold">{img.title}</p>
+                  <p className="text-white font-serif text-xl md:mb-0 lg:mb-2 text-start md:text-xl font-bold">{img.title}</p>
                 </motion.div>
               </motion.div>
             </Reveal>
