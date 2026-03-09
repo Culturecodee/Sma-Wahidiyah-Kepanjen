@@ -75,7 +75,7 @@ const Hero = () => {
         </div>
 
         {/* KOLOM KANAN: Slider Foto Sekolah */}
-        <div className="relative w-full max-w-full mx-auto md:ml-auto">
+        <div className="relative flex flex-col items-center justify-center w-full max-w-full mx-auto md:ml-auto">
           <Reveal direction="right" delay={0.5} overflow="visible">
             <div className="relative">
               {/* Slider Utama */}
