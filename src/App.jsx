@@ -7,6 +7,7 @@ import Footer from './components/section/Footer'
 import Home from "./components/pages/Home";
 import Profile from "./components/pages/Profile";
 import Akademiks from "./components/pages/Akademiks";
+import Ppdbs from "./components/pages/Ppdbs";
 import ScrollToTop from './components/section/ScrollToTop'
 
 
@@ -20,6 +21,7 @@ function AnimatedRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/profil" element={<Profile />} />
         <Route path="/akademik" element={<Akademiks />} />
+        <Route path="/ppdb" element={<Ppdbs />} />
       </Routes>
     </AnimatePresence>
   );

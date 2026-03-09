@@ -45,7 +45,7 @@ const VisiMisi = () => {
                     <div className="w-8 h-8 rounded-full bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-accent flex items-center justify-center font-bold flex-shrink-0">
                       {index + 1}
                     </div>
-                    <p className="text-slate-600 dark:text-primary-100/70 font-sans font-medium">
+                    <p className="text-slate-800 dark:text-primary-100/70 font-sans font-medium">
                       {text}
                     </p>
                   </div>

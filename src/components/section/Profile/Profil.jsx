@@ -75,7 +75,7 @@ const Profil = () => {
             <Reveal direction="up" delay={0.2} width="100%">
               <div className="bg-white dark:bg-primary-900 p-10 rounded-[2rem] shadow-sm border border-primary-100 dark:border-primary-800 group hover:bg-primary-700 transition-all duration-500">
                 <h3 className="text-primary-700 dark:text-accent font-bold mb-2 group-hover:text-white transition-colors">NPSN</h3>
-                <p className="text-3xl font-serif font-bold text-primary-900 dark:text-white group-hover:text-white transition-colors">2040XXXX</p>
+                <p className="text-3xl font-serif font-bold text-primary-900 dark:text-white group-hover:text-white transition-colors"> 69938510</p>
               </div>
             </Reveal>
             <Reveal direction="up" delay={0.4} width="100%">
