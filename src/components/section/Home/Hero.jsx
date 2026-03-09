@@ -82,7 +82,7 @@ const Hero = () => {
               <Swiper
                 effect={"fade"}
                 speed={1000}
-                autoplay={{ delay: 100, disableOnInteraction: true }}
+                autoplay={{ delay: 4000, disableOnInteraction: true }}
                 pagination={{ clickable: true }}
                 modules={[Autoplay, EffectFade, Pagination]}
                 className="absolute max-w-lg md:max-w-xl lg:max-w-3xl h-[350px] md:h-[400px] lg:h-[550px] shadow-sm rounded-3xl border-8 border-white dark:border-primary-900 z-10"

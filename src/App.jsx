@@ -7,6 +7,7 @@ import Footer from './components/section/Footer'
 import Home from "./components/pages/Home";
 import Profile from "./components/pages/Profile";
 import Akademiks from "./components/pages/Akademiks";
+import ScrollToTop from './components/section/ScrollToTop'
 
 
 function AnimatedRoutes() {
@@ -30,7 +31,7 @@ function App() {
       <div className="min-h-screen bg-white dark:bg-primary-900 transition-colors duration-300">
         {/* Navbar tetap muncul di semua halaman */}
         <Navbar />
-        
+        <ScrollToTop/>
         <main>
           <AnimatedRoutes />
         </main>

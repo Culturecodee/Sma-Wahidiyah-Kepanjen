@@ -39,7 +39,7 @@ const Programs = () => {
         </div>
 
         {/* Grid Cards dengan Staggered Reveal */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8">
           {programs.map((item, index) => (
             <Reveal 
               key={item.title} 
@@ -49,9 +49,9 @@ const Programs = () => {
             >
               <motion.div 
                 whileHover={{ y: -10 }} // Efek angkat saat di-hover
-                className="rounded-[2rem] bg-white dark:bg-primary-900 border border-primary-100 dark:border-primary-800 shadow-xl shadow-primary-900/5 h-full transition-colors duration-500"
+                className="mt-3 rounded-[2rem] bg-white dark:bg-primary-900 border border-primary-100 dark:border-primary-800 shadow-xl shadow-primary-900/5 h-full transition-colors duration-500"
               >
-                <div className="w-full h-40 mb-6 bg-primary-50 dark:bg-primary-800 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-inner">
+                <div className="w-full h-40 mb-6 bg-primary-50 dark:bg-primary-800 rounded-2xl flex items-center justify-center text-3xl shadow-inner">
                   <img src={ item.icon } className="w-full h-full object-cover object-center" alt="" />
                 </div>
                 <h3 className="pl-6 text-2xl font-serif font-bold text-primary-900 dark:text-white mb-4">

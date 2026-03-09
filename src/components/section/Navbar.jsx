@@ -75,14 +75,14 @@ const Navbar = () => {
             </Reveal>
           ))}
 
-          <Reveal direction="down" delay={0.7}>
+          {/* <Reveal direction="down" delay={0.7}>
             <button onClick={toggleTheme} className="p-2 rounded-xl bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-accent overflow-visible">
               <motion.div animate={{ rotate: isDark ? 180 : 0 }}>
                 {isDark ? <SunIcon /> : <MoonIcon />}
               </motion.div>
             </button>
           </Reveal>
-          
+           */}
           <Reveal direction="down" delay={0.8}>
             <motion.button whileHover={{ scale: 1.05 }} className="px-6 py-2 bg-primary-700 text-white rounded-full font-bold text-sm shadow-lg shadow-primary-700/20">
               Daftar
@@ -92,9 +92,9 @@ const Navbar = () => {
 
         {/* MOBILE TOGGLE BUTTON */}
         <div className="md:hidden flex items-center gap-4">
-           <button onClick={toggleTheme} className="p-2 text-primary-900 dark:text-white">
+           {/* <button onClick={toggleTheme} className="p-2 text-primary-900 dark:text-white">
               {isDark ? <SunIcon /> : <MoonIcon />}
-           </button>
+           </button> */}
            <button onClick={() => setIsOpen(!isOpen)} className="text-primary-900 dark:text-white focus:outline-none">
              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"} />

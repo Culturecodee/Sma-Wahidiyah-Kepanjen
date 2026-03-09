@@ -28,6 +28,10 @@
 
 /* 4. SETTING DEFAULT AGAR OTOMATIS BERUBAH */
 @layer base {
+
+  :root {
+  color-scheme: light; /* Memberitahu browser untuk merender komponen asli dalam mode light */
+}
   html {
     scroll-behavior: smooth;
   }

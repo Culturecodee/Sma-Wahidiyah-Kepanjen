@@ -9,5 +9,11 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Paksa 'light' ke localStorage dan documentElement saat pertama kali dimuat
+      localStorage.setItem('theme', 'light');
+      document.documentElement.classList.remove('dark');
+      document.documentElement.style.colorScheme = 'light';
+    </script>
   </body>
 </html>
