@@ -1,3 +1,4 @@
+import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
@@ -29,19 +30,21 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-white dark:bg-primary-900 transition-colors duration-300">
-        {/* Navbar tetap muncul di semua halaman */}
-        <Navbar />
-        <ScrollToTop/>
-        <main>
-          <AnimatedRoutes />
-        </main>
+    <HelmetProvider>
+      <Router>
+        <div className="min-h-screen bg-white dark:bg-primary-900 transition-colors duration-300">
+          {/* Navbar tetap muncul di semua halaman */}
+          <Navbar />
+          <ScrollToTop/>
+          <main>
+            <AnimatedRoutes />
+          </main>
 
-        {/* Footer bisa diletakkan di sini nanti */}
-        <Footer/>
-      </div>
-    </Router>
+          {/* Footer bisa diletakkan di sini nanti */}
+          <Footer/>
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 }
 
