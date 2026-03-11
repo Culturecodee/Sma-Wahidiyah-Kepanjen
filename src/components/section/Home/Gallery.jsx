@@ -62,7 +62,7 @@ const Gallery = () => {
                     hover: { scale: 1.1 }
                   }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
-                  className="w-full h-full object-cover transition-colors duration-500"
+                  className="w-full h-full md:h-48 object-cover transition-colors duration-500"
                 />
                 
                 
