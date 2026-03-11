@@ -44,7 +44,7 @@ const Profil = () => {
               <Reveal direction="right" delay={0.5} overflow="visible" width="100%">
                 <div className="relative group">
                   {/* Bingkai Utama Gambar */}
-                  <div className="w-full relative z-10 rounded-3xl overflow-hidden border-8 md:border-[16px] border-white dark:border-primary-900 aspect-video md:aspect-square lg:aspect-video">
+                  <div className="w-full relative z-10 rounded-xl overflow-hidden border-4 border-slate-200 dark:border-primary-900 aspect-video md:aspect-square lg:aspect-video">
                     <img 
                       src="/gedung.jpg" 
                       alt="Gedung SMA Wahidiyah Kepanjen" 
