@@ -17,7 +17,7 @@ export default function Home() {
         <meta name="description" content="Selamat datang di SMA Wahidiyah Kepanjen. Sekolah menengah atas unggulan di Malang yang memadukan kurikulum nasional dengan kedalaman spiritual Wahidiyah untuk mencetak lulusan kompeten dan beradab." />
         
         {/* Keywords: Targetkan pencarian lokal Kepanjen dan Malang */}
-        <meta name="keywords" content="SMA Wahidiyah Kepanjen, SMA Wahidiyah Malang, sekolah terbaik di Kepanjen, SMA Islam Malang, pondok pesantren Kepanjen, pendaftaran SMA Kepanjen 2026, pendidikan berkarakter Malang, website, web sekolah, web perjuangan, Wahidiyah" />
+        <meta name="keywords" content="SMA Wahidiyah Kepanjen, SMA Wahidiyah Malang, sekolah terbaik di Kepanjen, SMA Islam Malang, pondok pesantren Kepanjen, pendaftaran SMA Kepanjen 2026, pendidikan berkarakter Malang, website, web sekolah, web perjuangan, Wahidiyah, Smawa web, smawa, Smawa Kepanjen, Sekolah menengah atas" />
         
         {/* Open Graph (OG) Tags: Untuk tampilan preview saat link web dikirim di WA/Medsos */}
         <meta property="og:type" content="website" />
