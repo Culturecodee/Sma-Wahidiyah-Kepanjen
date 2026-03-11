@@ -4,19 +4,18 @@ import { motion } from "framer-motion";
 const AcademicPrograms = () => {
   const classPrograms = [
     { title: "Kelas Tahfidz", desc: "Fokus pada hafalan Al-Qur'an dengan sistem setoran harian dan bimbingan tajwid." },
-    { title: "Kelas Digital", desc: "Pembelajaran berbasis IT dengan kurikulum coding dasar dan desain grafis." },
-    { title: "Kelas Sains", desc: "Eksplorasi mendalam di bidang matematika dan IPA dengan praktikum rutin." }
+    { title: "Jurnalistik Modern", desc: "Penguasaan literasi media dan komunikasi kreatif untuk menyampaikan informasi kredibel di era digital." },
+    { title: "Ilmu Kesadaran", desc: "Pendalaman spiritual untuk membangun karakter santri yang sadar akan hakikat diri dan pengabdian kepada Tuhan." }
   ];
 
   // Data Eskul: Ubah dari string menjadi objek dengan 'name' dan 'src'
   // Gunakan format gambar .webp untuk performa SEO terbaik
   const extraCurricular = [
-    { name: "Pramuka", src: "/smawa.png" },
-    { name: "Paskibra", src: "https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=400" },
-    { name: "Futsal", src: "https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=400" },
-    { name: "Seni Hadroh", src: "https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=400" },
-    { name: "Jurnalistik", src: "https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=400" },
-    { name: "Robotik", src: "https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=400" },
+    { name: "Pramuka", src: "/pramuka.jpg" },
+    { name: "Paskibra", src: "/PASKIBRAKA.jpg" },
+    { name: "Futsal", src: "/futsal.jpg" },
+    { name: "Seni Hadroh", src: "/hadroh.jpg" },
+    { name: "Jurnalistik", src: "/sjute2.JPG" },
   ];
 
   return (
