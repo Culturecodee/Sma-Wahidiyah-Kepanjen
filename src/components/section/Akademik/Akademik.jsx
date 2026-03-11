@@ -52,7 +52,7 @@ const AcademicPrograms = () => {
             <Reveal key={program.title} direction="up" delay={0.2 + (index * 0.1)}>
               <motion.div 
                 whileHover={{ y: -10 }}
-                className="p-10 rounded-3xl bg-primary-50 dark:bg-primary-900 border border-primary-100 dark:border-primary-800 h-full shadow-sm hover:shadow-xl hover:bg-white dark:hover:bg-primary-900 transition-all duration-300"
+                className="p-10 rounded-3xl bg-primary-50 dark:bg-primary-900 border border-primary-100 dark:border-primary-800 h-50 shadow-sm hover:bg-white dark:hover:bg-primary-900 transition-all duration-300"
               >
                 <h3 className="text-2xl md:text-3xl font-serif font-bold text-primary-900 dark:text-white mb-5">{program.title}</h3>
                 <p className="text-slate-600 dark:text-primary-100/70 leading-relaxed font-sans">{program.desc}</p>
