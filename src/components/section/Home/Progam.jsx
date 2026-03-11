@@ -5,17 +5,17 @@ const programs = [
   {
     title: "Tahfidzul Qur'an",
     desc: "Program unggulan menghafal Al-Qur'an dengan metode mutqin dan bimbingan ustadz berpengalaman.",
-    icon: "/smawa.png",
+    icon: "/tahfidz.jpg",
   },
   {
-    title: "Kajian Kitab Kuning",
-    desc: "Pendalaman literatur Islam klasik untuk membentuk pemahaman agama yang mendalam dan moderat.",
-    icon: "/smawa.png",
+    title: "Outing Class & Edukasi Lapangan",
+    desc: "Eksplorasi belajar di luar kelas untuk memperluas wawasan dan pengalaman nyata santri di dunia industri maupun alam.",
+    icon: "/outingclass.jpg",
   },
   {
-    title: "Digital Science",
-    desc: "Penguasaan teknologi informasi dan sains modern sebagai bekal menghadapi era industri 4.0.",
-    icon: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=600",
+    title: "Jurnalistik & Media Kreatif",
+    desc: "Penguasaan literasi media dan komunikasi kreatif untuk menyampaikan informasi kredibel di era digital.",
+    icon: "/sjute2.JPG",
   },
 ];
 

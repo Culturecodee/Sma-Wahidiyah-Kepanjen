@@ -52,7 +52,7 @@ const AcademicPrograms = () => {
             <Reveal key={program.title} direction="up" delay={0.2 + (index * 0.1)}>
               <motion.div 
                 whileHover={{ y: -10 }}
-                className="p-10 rounded-3xl bg-primary-50 dark:bg-primary-900 border border-primary-100 dark:border-primary-800 h-50 shadow-sm hover:bg-white dark:hover:bg-primary-900 transition-all duration-300"
+                className="p-10 rounded-3xl bg-primary-50 dark:bg-primary-900 border border-primary-100 dark:border-primary-800 h-60 shadow-sm hover:bg-white dark:hover:bg-primary-900 transition-all duration-300"
               >
                 <h3 className="text-2xl md:text-3xl font-serif font-bold text-primary-900 dark:text-white mb-5">{program.title}</h3>
                 <p className="text-slate-600 dark:text-primary-100/70 leading-relaxed font-sans">{program.desc}</p>
@@ -62,7 +62,7 @@ const AcademicPrograms = () => {
         </div>
 
         {/* Ekstrakurikuler Card Grid (Responsive & Menarik) */}
-        <div className="bg-primary-900 dark:bg-[#011a14] rounded-[3rem] p-12 text-white shadow-2xl shadow-primary-950/20">
+        <div className=" bg-primary-900 dark:bg-[#011a14] p-12 text-white shadow-2xl shadow-primary-950/20">
           <Reveal direction="up">
             <h2 className="text-3xl md:text-5xl font-serif font-bold mb-12 text-center">Pengembangan Bakat & Minat</h2>
           </Reveal>
@@ -72,7 +72,7 @@ const AcademicPrograms = () => {
               - 2 Kolom di Tablet (sm:)
               - 3 Kolom di Desktop (md:)
           */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 ">
             {extraCurricular.map((eskul, index) => (
               <Reveal key={eskul.name} direction="up" delay={0.1 * index} width="100%">
                 <motion.div 
@@ -106,9 +106,6 @@ const AcademicPrograms = () => {
                         >
                             {eskul.name}
                         </motion.h4>
-                        <p className="text-xs text-primary-100/70 mt-1 uppercase tracking-widest font-sans font-semibold">
-                           SMA Wahidiyah Kepanjen
-                        </p>
                     </div>
                 </motion.div>
               </Reveal>
