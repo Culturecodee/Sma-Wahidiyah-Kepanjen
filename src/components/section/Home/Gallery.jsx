@@ -2,10 +2,10 @@ import Reveal from "../Reveal";
 import { motion } from "framer-motion";
 
 const galleryImages = [
-  { id: 1, src: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=600", title: "Gedung Utama", size: "md:col-span-2 md:row-span-2" },
-  { id: 2, src: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=600", title: "Laboratorium Komputer", size: "md:col-span-1 md:row-span-1" },
-  { id: 3, src: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=600", title: "Perpustakaan", size: "md:col-span-1 md:row-span-1" },
-  { id: 4, src: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=600", title: "Kegiatan Siswa", size: "md:col-span-2 md:row-span-1" },
+  { id: 1, src: "/gedung.jpg", title: "Gedung Utama", size: "md:col-span-2 md:row-span-2" },
+  { id: 2, src: "/gazebo.jpg", title: "Gazebo", size: "md:col-span-1 md:row-span-1" },
+  { id: 3, src: "/perpustakaan.jpg", title: "Perpustakaan", size: "md:col-span-1 md:row-span-1" },
+  { id: 4, src: "kelas.jpg", title: "Ruang kelas", size: "md:col-span-2 md:row-span-1" },
 ];
 
 const Gallery = () => {
