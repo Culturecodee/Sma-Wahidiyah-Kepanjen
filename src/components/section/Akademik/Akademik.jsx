@@ -15,7 +15,7 @@ const AcademicPrograms = () => {
     { name: "Paskibra", src: "/PASKIBRAKA.jpg" },
     { name: "Futsal", src: "/futsal.jpg" },
     { name: "Seni Hadroh", src: "/hadroh.jpg" },
-    { name: "Jurnalistik", src: "/sjute2.JPG" },
+    { name: "Jurnalistik", src: "/sjute2.jpg" },
   ];
 
   return (

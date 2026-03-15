@@ -15,7 +15,7 @@ const programs = [
   {
     title: "Jurnalistik & Media Kreatif",
     desc: "Penguasaan literasi media dan komunikasi kreatif untuk menyampaikan informasi kredibel di era digital.",
-    icon: "/sjute2.JPG",
+    icon: "/sjute2.jpg",
   },
 ];
 
