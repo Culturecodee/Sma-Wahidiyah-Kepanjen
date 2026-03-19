@@ -1,158 +1,90 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { Helmet } from 'react-helmet-async';
 import Reveal from "../Reveal";
+import { motion } from "framer-motion";
 
-const Ppdb = () => {
-  const [step, setStep] = useState(1);
-
-  const nextStep = () => setStep(step + 1);
-  const prevStep = () => setStep(step - 1);
+const PPDB = () => {
+  const GFORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSdwauRnDhy2edFGQXkj7BPPMB8cylid6_YYR6kLpGABEsmgXQ/viewform?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnEdp8bV64LHIQnmyKscepxEX7iamwRC-MGzQQc91sab-umWvWk9HiAxBRT9Q_aem_sdYYdPQhyqv6_KDRoxDxTA";
 
   return (
-    <div className="pt-32 pb-20 min-h-screen bg-primary-50 dark:bg-primary-950 transition-colors duration-500">
-      <div className="container mx-auto px-6">
+    <>
+      <Helmet>
+        <title>PPDB 2026/2027 | SMA Wahidiyah Kepanjen - Daftar Online</title>
+        <meta name="description" content="Pendaftaran Peserta Didik Baru SMA Wahidiyah Kepanjen. Klik untuk mengisi formulir pendaftaran resmi." />
+      </Helmet>
+
+      {/* Main Container dengan Flexbox */}
+      <section className="pt-32 pb-20 min-h-screen bg-white dark:bg-primary-950 flex flex-col items-center justify-center transition-colors duration-500 overflow-hidden">
         
-        {/* Header PPDB */}
-        <div className="max-w-3xl mb-12 text-center md:text-left">
-          <Reveal direction="down">
-            <span className="text-primary-700 dark:text-accent font-bold tracking-widest uppercase text-sm">Penerimaan Siswa Baru</span>
-          </Reveal>
-          <Reveal direction="down" delay={0.2}>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary-900 dark:text-white mt-4">
-              Form Pendaftaran T.A 2026/2027
-            </h1>
-            <p className="mt-4 text-slate-600 dark:text-primary-100/70">
-              Mohon isi form pendaftaran berikut sebagai syarat administrasi SMA Wahidiyah Kepanjen.
-            </p>
-          </Reveal>
+        {/* Dekorasi Background Tetap Sama */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+          <div className="absolute top-40 right-10 w-80 h-80 bg-primary-700 rounded-full blur-[100px]" />
         </div>
 
-        {/* Progress Bar */}
-        <div className="max-w-4xl mx-auto mb-12">
-          <div className="flex justify-between mb-2">
-            {[1, 2, 3, 4].map((num) => (
-              <div 
-                key={num} 
-                className={`w-8 h-8 rounded-full flex items-center justify-center font-bold transition-colors ${
-                  step >= num ? "bg-primary-700 text-white" : "bg-white text-slate-400 border border-slate-200"
-                }`}
+        <div className="container mx-auto px-6 relative z-10 flex flex-col items-center">
+          
+          {/* Bagian Header Konten */}
+          <div className="flex flex-col items-center text-center max-w-4xl">
+            <Reveal direction="down">
+              <span className="text-primary-700 dark:text-accent font-bold tracking-[0.2em] uppercase text-xs mb-6 block">
+                Admission Office
+              </span>
+            </Reveal>
+
+            <Reveal direction="down" delay={0.2}>
+              <h1 className="text-5xl md:text-7xl font-serif font-bold text-primary-900 dark:text-white leading-tight mb-8">
+                Penerimaan Siswa Baru <br />
+                <span className="text-primary-700 italic text-4xl md:text-6xl">T.A 2026 / 2027</span>
+              </h1>
+            </Reveal>
+
+            <Reveal direction="up" delay={0.4}>
+              <p className="text-lg text-slate-600 dark:text-primary-100/70 mb-12 max-w-2xl">
+                Wujudkan masa depan gemilang bersama SMA Wahidiyah Kepanjen. Silakan klik tombol di bawah untuk mengisi formulir pendaftaran resmi melalui Google Form.
+              </p>
+            </Reveal>
+          </div>
+
+          {/* Bagian Tombol dengan Flexbox */}
+          <Reveal direction="up" delay={0.6}>
+            <div className="flex flex-col items-center gap-6 mx-5 my-5">
+              <a
+                href={GFORM_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 px-10 py-5 bg-primary-700 text-white rounded-full font-bold text-sm shadow-md shadow-primary-900/30 hover:bg-primary-800 transition-all duration-500 hover:scale-110"
               >
-                {num}
+                <span>Isi Formulir Sekarang</span>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+              
+              <div className="flex items-center gap-2 text-sm text-slate-400 italic">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                <p>Pendaftaran sedang dibuka</p>
               </div>
-            ))}
-          </div>
-          <div className="h-2 bg-white rounded-full overflow-hidden">
-            <motion.div 
-              className="h-full bg-primary-700"
-              initial={{ width: "25%" }}
-              animate={{ width: `${step * 25}%` }}
-            />
-          </div>
-        </div>
-
-        {/* Form Container */}
-        <div className="max-w-4xl mx-auto bg-white dark:bg-primary-900 rounded-[2.5rem] shadow-xl p-8 md:p-12 border border-primary-100 dark:border-primary-800">
-          <form className="space-y-8">
-            <AnimatePresence mode="wait">
-              {/* STEP 1: IDENTITAS DIRI */}
-              {step === 1 && (
-                <motion.div 
-                  key="step1"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  className="space-y-6"
-                >
-                  <h2 className="text-2xl font-serif font-bold text-primary-900 dark:text-white border-b pb-4">Identitas Peserta Didik</h2>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="flex flex-col gap-2">
-                      <label className="font-bold text-slate-700 dark:text-primary-100">Nama Lengkap *</label>
-                      <input type="text" className="p-4 rounded-xl bg-slate-50 dark:bg-primary-950 border border-slate-200 dark:border-primary-800 outline-none focus:border-primary-700" placeholder="Sesuai Akta Kelahiran" required />
-                    </div>
-                    <div className="flex flex-col gap-2">
-                      <label className="font-bold text-slate-700 dark:text-primary-100">Jenis Kelamin *</label>
-                      <select className="p-4 rounded-xl bg-slate-50 dark:bg-primary-950 border border-slate-200 dark:border-primary-800 outline-none focus:border-primary-700">
-                        <option>Laki-laki</option>
-                        <option>Perempuan</option>
-                      </select>
-                    </div>
-                    <div className="flex flex-col gap-2">
-                      <label className="font-bold text-slate-700 dark:text-primary-100">NISN (10 Digit)</label>
-                      <input type="number" className="p-4 rounded-xl bg-slate-50 dark:bg-primary-950 border border-slate-200 dark:border-primary-800 outline-none focus:border-primary-700" placeholder="0009321234" />
-                    </div>
-                    <div className="flex flex-col gap-2">
-                      <label className="font-bold text-slate-700 dark:text-primary-100">NIK / Kitas *</label>
-                      <input type="number" className="p-4 rounded-xl bg-slate-50 dark:bg-primary-950 border border-slate-200 dark:border-primary-800 outline-none focus:border-primary-700" placeholder="16 digit sesuai KK" required />
-                    </div>
-                  </div>
-                </motion.div>
-              )}
-
-              {/* STEP 2: LAHIR & AGAMA */}
-              {step === 2 && (
-                <motion.div 
-                  key="step2"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  className="space-y-6"
-                >
-                  <h2 className="text-2xl font-serif font-bold text-primary-900 dark:text-white border-b pb-4">Kelahiran & Kepercayaan</h2>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="flex flex-col gap-2">
-                      <label className="font-bold text-slate-700 dark:text-primary-100">Tempat Lahir *</label>
-                      <input type="text" className="p-4 rounded-xl bg-slate-50 dark:bg-primary-950 border border-slate-200 dark:border-primary-800 outline-none focus:border-primary-700" required />
-                    </div>
-                    <div className="flex flex-col gap-2">
-                      <label className="font-bold text-slate-700 dark:text-primary-100">Tanggal Lahir *</label>
-                      <input type="date" className="p-4 rounded-xl bg-slate-50 dark:bg-primary-950 border border-slate-200 dark:border-primary-800 outline-none focus:border-primary-700" required />
-                    </div>
-                    <div className="flex flex-col gap-2">
-                      <label className="font-bold text-slate-700 dark:text-primary-100">Agama & Kepercayaan *</label>
-                      <select className="p-4 rounded-xl bg-slate-50 dark:bg-primary-950 border border-slate-200 dark:border-primary-800 outline-none focus:border-primary-700">
-                        <option>Islam</option>
-                        <option>Kristen Protestan</option>
-                        <option>Katholik</option>
-                        <option>Hindu</option>
-                        <option>Budha</option>
-                        <option>Khonghucu</option>
-                      </select>
-                    </div>
-                  </div>
-                </motion.div>
-              )}
-
-              {/* STEP 3 & 4: Dapat dilanjutkan dengan logika Alamat & PIP */}
-              {step >= 3 && (
-                <div className="text-center py-10">
-                   <p className="italic text-slate-500">Lanjutkan pengisian Alamat, Transportasi, dan Data PIP...</p>
-                </div>
-              )}
-            </AnimatePresence>
-
-            {/* Navigation Buttons */}
-            <div className="flex justify-between pt-8 border-t dark:border-primary-800">
-              {step > 1 && (
-                <button type="button" onClick={prevStep} className="px-8 py-3 rounded-xl border border-primary-700 text-primary-700 font-bold hover:bg-primary-50 transition-colors">
-                  Sebelumnya
-                </button>
-              )}
-              {step < 4 ? (
-                <button type="button" onClick={nextStep} className="ml-auto px-10 py-4 bg-primary-700 text-white rounded-2xl font-bold shadow-lg shadow-primary-900/20 hover:bg-primary-800 transition-all">
-                  Lanjutkan
-                </button>
-              ) : (
-                <button type="submit" className="ml-auto px-10 py-4 bg-accent text-white rounded-2xl font-bold shadow-lg hover:brightness-110 transition-all">
-                  Kirim Pendaftaran
-                </button>
-              )}
             </div>
-          </form>
-        </div>
+          </Reveal>
 
-      </div>
-    </div>
+          {/* Gambar Dekoratif dengan Flexbox Centering */}
+          <Reveal direction="up" delay={0.8}>
+            <div className="mt-20 w-full max-w-5xl flex items-center justify-center">
+                <div className="relative w-full rounded-3xl overflow-hidden border-8 mb-10 border-white dark:border-primary-900 shadow-md aspect-video">
+                    <img 
+                        src="/gedung.jpg" 
+                        alt="Gedung SMA Wahidiyah Kepanjen" 
+                        className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
+                        onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1541339907198-e08756ebafe3?q=80&w=1200"; }}
+                    />
+                    <div className="absolute inset-0 bg-primary-900/10 pointer-events-none" />
+                </div>
+            </div>
+          </Reveal>
+
+        </div>
+      </section>
+    </>
   );
 };
 
-export default Ppdb;
+export default PPDB;

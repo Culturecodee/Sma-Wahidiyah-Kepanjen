@@ -8,6 +8,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
   const location = useLocation();
+  const G_FORM = 'https://docs.google.com/forms/d/e/1FAIpQLSdwauRnDhy2edFGQXkj7BPPMB8cylid6_YYR6kLpGABEsmgXQ/viewform?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnEdp8bV64LHIQnmyKscepxEX7iamwRC-MGzQQc91sab-umWvWk9HiAxBRT9Q_aem_sdYYdPQhyqv6_KDRoxDxTA'
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -74,6 +75,13 @@ const Navbar = () => {
               </Link>
             </Reveal>
           ))}
+            {/* <Reveal direction="down" delay={0.2 + index * 0.1}>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwauRnDhy2edFGQXkj7BPPMB8cylid6_YYR6kLpGABEsmgXQ/viewform" className={`font-sans font-semibold text-sm transition-colors ${
+                location.pathname === item.path ? "text-primary-700 dark:text-accent" : "text-primary-900 dark:text-primary-100"
+              }`}>
+                PPDB
+              </a>
+            </Reveal> */}
 
           {/* <Reveal direction="down" delay={0.7}>
             <button onClick={toggleTheme} className="p-2 rounded-xl bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-accent overflow-visible">
@@ -84,9 +92,11 @@ const Navbar = () => {
           </Reveal>
            */}
           <Reveal direction="down" delay={0.8}>
-            <motion.button whileHover={{ scale: 1.05 }} className="px-6 py-2 bg-primary-700 text-white rounded-full font-bold text-sm shadow-lg shadow-primary-700/20">
+            <a href={G_FORM} target="_blank" className="">
+            <button className="px-6 py-2 bg-primary-700 text-white rounded-full font-bold text-sm shadow-lg shadow-primary-700/20 duration-300 transition-all hover:bg-accent">
               Daftar
-            </motion.button>
+            </button>
+            </a>
           </Reveal>
         </div>
 
@@ -134,13 +144,13 @@ const Navbar = () => {
                 </Link>
               ))}
             </div>
-
-            <motion.button 
-              whileTap={{ scale: 0.95 }}
-              className="mt-auto w-full py-4 bg-primary-700 text-white rounded-2xl font-bold shadow-lg"
-            >
+            <a href={G_FORM} target="_blank" className="mt-auto">
+            <button 
+              className="w-full py-4 bg-primary-700 text-white rounded-2xl font-bold shadow-lg hover:scale-110 duration-300 transition-all"
+              >
               Daftar Sekarang
-            </motion.button>
+            </button>
+              </a>
           </motion.div>
         )}
       </AnimatePresence>
