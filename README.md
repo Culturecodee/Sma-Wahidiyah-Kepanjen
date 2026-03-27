@@ -1,16 +1,34 @@
-# React + Vite
+# 🏫 Website Resmi SMA Wahidiyah Kepanjen
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Live Demo](https://img.shields.io/badge/Demo-Live_Site-brightgreen?style=for-the-badge&logo=vercel)](https://sma-wahidiyah-kepanjen.vercel.app/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-Currently, two official plugins are available:
+Website profil sekolah modern untuk **SMA Wahidiyah Kepanjen**. Platform ini dirancang untuk memberikan akses informasi yang cepat, transparan, dan interaktif bagi seluruh warga sekolah, calon siswa, serta wali murid.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🌟 Fitur Utama
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **⚡ High Performance:** Loading cepat dan optimasi SEO.
+* **📱 Fully Responsive:** Tampilan adaptif untuk Mobile, Tablet, dan Desktop.
+* **📰 Pusat Informasi:** Update berita sekolah, pengumuman, dan agenda akademik.
+* **🏫 Profil Institusi:** Visi, misi, sejarah, dan fasilitas sekolah.
+* **🔗 Link Terintegrasi:** Akses mudah ke media sosial dan kontak resmi sekolah.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Sebagai proyek *fullstack modern*, website ini dibangun menggunakan:
+
+- **Frontend:** [React.js](https://react.dev/) (dengan Vite/Next.js)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Deployment:** [Vercel](https://vercel.com/)
+- **Components:** Headless UI / Lucide Icons
+
+## 🚀 Memulai (Local Development)
+
+Ikuti langkah berikut untuk menjalankan proyek di komputer lokal Anda:
+
+1. **Clone Repositori**
+   ```bash
+   git clone [https://github.com/username-kamu/sma-wahidiyah.git](https://github.com/username-kamu/sma-wahidiyah.git)
