@@ -61,9 +61,9 @@ const AcademicPrograms = () => {
         </div>
 
         {/* Ekstrakurikuler Card Grid (Responsive & Menarik) */}
-        <div className=" bg-primary-900 dark:bg-[#011a14] p-12 text-white shadow-2xl shadow-primary-950/20">
+        <div className="w-full text-white">
           <Reveal direction="up">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-12 text-center">Pengembangan Bakat & Minat</h2>
+            <h2 className="text-3xl text-primary-900 md:text-5xl font-serif font-bold mb-12 text-center">Pengembangan Bakat & Minat</h2>
           </Reveal>
           
           {/* Grid System: 
@@ -71,7 +71,7 @@ const AcademicPrograms = () => {
               - 2 Kolom di Tablet (sm:)
               - 3 Kolom di Desktop (md:)
           */}
-          <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 ">
             {extraCurricular.map((eskul, index) => (
               <Reveal key={eskul.name} direction="up" delay={0.1 * index} width="100%">
                 <motion.div 
