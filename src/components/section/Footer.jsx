@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Reveal from "./Reveal";
-import { Instagram, Youtube } from "lucide-react";
+import { Instagram, Youtube, MapPin, Phone, Mail} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -35,9 +35,9 @@ const Footer = () => {
           <Reveal direction="up" delay={0.4}>
             <h3 className="font-bold text-lg mb-6 text-accent">Kontak Kami</h3>
             <ul className="space-y-4 text-sm text-primary-100/70 font-sans">
-              <li className="flex items-center gap-3">📍 Kepanjen, Malang, Jawa Timur</li>
-              <li className="flex items-center gap-3">📞 (0341) 123-4567</li>
-              <li className="flex items-center gap-3">📧 info@smawahidiyahkpj.sch.id</li>
+              <li className="flex items-center gap-3"><MapPin /> Kepanjen, Malang, Jawa Timur</li>
+              <li className="flex items-center gap-3"><Phone /> (0341) 123-4567</li>
+              <li className="flex items-center gap-3"><Mail /> info@smawahidiyahkpj.sch.id</li>
             </ul>
           </Reveal>
         </div>
@@ -60,8 +60,8 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <div className="container mx-auto px-6 mt-20 pt-8 border-t border-primary-800 text-center text-xs text-primary-100/30">
-        <p>© 2026 SMA Wahidiyah Kepanjen. All Rights Reserved. Created with ❤️ by Fal.</p>
+      <div className="container mx-auto px-6 mt-20 pt-8 border-t border-primary-800 text-center text-xs text-primary">
+        <p>© 2026 SMA Wahidiyah Kepanjen. All Rights Reserved. Created By <b>CULTURE CODE</b></p>
       </div>
     </footer>
   );
